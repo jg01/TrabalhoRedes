@@ -1,0 +1,232 @@
+/* Resetando margens e paddings padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;  /* Garante que a altura da página ocupe toda a altura da tela */
+    display: flex;
+    flex-direction: column;  /* Organiza o layout em coluna */
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+main {
+    flex: 1;  /* Faz o conteúdo principal crescer para ocupar o espaço restante */
+    padding: 20px;
+}
+
+/* Estilo geral para o header */
+header {
+    background-color: #333;  /* Cor de fundo escura */
+    color: white;  /* Cor do texto em branco */
+    text-align: center;  /* Centraliza o texto dentro do header */
+    position: relative;  /* Posicionamento relativo para facilitar o controle do layout */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  /* Adiciona uma sombra suave ao header */
+}
+
+/* Estilo do container do título */
+#titulo-home {
+    display: flex;
+    flex-direction: column;  /* Organiza os títulos de forma vertical */
+    align-items: center;  /* Centraliza o conteúdo no eixo horizontal */
+    justify-content: center;  /* Alinha os itens no centro verticalmente */
+}
+
+/* Estilo do título principal */
+.titulo1 h1 {
+    font-size: 36px;  /* Tamanho grande para o título principal */
+    margin: 0;  /* Remove margens */
+    font-weight: bold;  /* Deixa o texto mais forte */
+    text-transform: uppercase;  /* Torna as letras maiúsculas */
+}
+
+/* Estilo do subtítulo */
+.titulo2 h2 {
+    font-size: 24px;  /* Tamanho do subtítulo */
+    margin: 5px 0 0 0;  /* Adiciona uma margem acima do subtítulo */
+    font-weight: normal;  /* Font-weight normal para o subtítulo */
+    font-style: italic;  /* Deixa o subtítulo em itálico */
+}
+
+/* Estilo do menu */
+.menu-container {
+    width: 100%;  /* Garante que o menu ocupe toda a largura */
+    position: sticky;  /* Fixa o menu quando rolar */
+    top: 0;  /* O menu ficará no topo da página */
+    background-color: white;  /* Cor de fundo branca para o menu */
+    z-index: 1000;  /* Garante que o menu ficará acima de outros elementos */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  /* Sombra suave para dar destaque ao menu */
+    padding: 10px 0;  /* Espaçamento vertical */
+}
+
+/* Estilo da lista (menu) */
+.menu-horizontal {
+    list-style: none;  /* Remove os marcadores da lista */
+    padding: 0;  /* Remove o padding da lista */
+    margin: 0;  /* Remove a margem da lista */
+    display: flex;  /* Exibe os itens de lista em linha */
+    gap: 15px;  /* Espaçamento entre os itens */
+    justify-content: center;  /* Centraliza os itens horizontalmente */
+}
+
+/* Estilo dos links dentro dos itens de lista */
+.menu-horizontal li a {
+    text-decoration: none;  /* Remove o sublinhado do link */
+    color: #333;  /* Cor escura para o texto */
+    font-weight: bold;  /* Tamanho da fonte em negrito */
+    padding: 8px 12px;  /* Espaçamento interno nos links */
+    border-radius: 5px;  /* Bordas arredondadas nos links */
+    transition: background-color 0.3s;  /* Transição suave de cor de fundo */
+}
+
+.menu-horizontal li a:hover {
+    background-color: #e0e0e0;  /* Cor de fundo ao passar o mouse */
+}
+
+#corpo-site {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;  /* Espaço entre as seções */
+}
+
+/* Estilo para cada seção */
+#corpo-site > div {
+    background-color: white;  /* Fundo branco para as seções */
+    border-radius: 8px;  /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Sombra suave para as seções */
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;  /* Efeito de transição */
+}
+
+#corpo-site > div:hover {
+    transform: translateY(-5px);  /* Levanta a seção ao passar o mouse */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);  /* Aumenta a sombra ao passar o mouse */
+}
+
+/* Estilo dos títulos das seções */
+#corpo-site h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #333;  /* Cor do título */
+    text-align: center;  /* Centraliza os títulos */
+}
+
+/* Estilo dos parágrafos */
+#corpo-site p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #444;  /* Cor do texto */
+    text-align: justify;  /* Alinha o texto de forma justificada */
+    margin-bottom: 20px;
+}
+
+#corpo-site .paragrafo-principal {
+    font-size: 1.2em; /* Tamanho da fonte */
+    line-height: 1.6; /* Espaçamento entre linhas */
+    margin-top: 20px; /* Espaçamento superior */
+    text-align: justify; /* Justifica o texto */
+    max-width: 800px; /* Largura máxima para o parágrafo */
+    margin-left: auto; /* Margem esquerda automática para centralizar */
+    margin-right: auto; /* Margem direita automática para centralizar */
+}
+
+/* Estilizando a imagem principal */
+#corpo-site .imagem-principal {
+    display: block; /* Faz a imagem se comportar como um bloco */
+    max-width: 30%; /* Limita a largura máxima da imagem para 100% da largura do container */
+    height:50%; /* Ajusta a altura automaticamente mantendo a proporção */
+    margin: 0 auto; /* Centraliza a imagem */
+    border-radius: 8px; /* Bordas arredondadas para a imagem */
+}
+
+/* Estilo para a lista de referências */
+.referencias-lista {
+    list-style-type: disc; /* Define o ponto (bullet) como marcador */
+    padding-left: 50px;  /* Adiciona padding apenas à esquerda */
+    padding-right: 50px;  /* Adiciona padding apenas à direita */
+    margin: 0;
+}
+
+/* Estilo para cada item de referência */
+.referencia-item {
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Estilo para links dentro das referências */
+.referencia-item a {
+    color: #0066cc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Efeito de hover para os links */
+.referencia-item a:hover {
+    color: #004d99;
+    text-decoration: underline;
+}
+
+/* Estilo para o título "Referências" */
+#referencias h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#backToTop {
+    position: fixed;
+    bottom: 20px; /* Distância do fundo */
+    right: 20px; /* Distância da borda direita */
+    background-color: #333; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    border: none; /* Sem borda */
+    border-radius: 50%; /* Botão redondo */
+    width: 50px; /* Tamanho do botão */
+    height: 50px; /* Tamanho do botão */
+    font-size: 24px; /* Tamanho da seta */
+    display: none; /* Inicialmente escondido */
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1000; /* Fica acima do conteúdo */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#backToTop:hover {
+    background-color: #444; /* Altera a cor do botão ao passar o mouse */
+}
+
+/* Estilo para quando a seta estiver visível */
+#backToTop.visible {
+    display: flex; /* Mostra a seta quando a classe 'visible' for adicionada */
+}
+
+
+footer {
+    background-color: #333;  /* Cor de fundo escura para o footer */
+    color: white;  /* Cor do texto em branco */
+    padding: 10px 0;  /* Espaçamento vertical */
+    text-align: center;  /* Centraliza o texto */
+    font-size: 14px;  /* Tamanho de fonte menor */
+}
+
+
+/* Responsividade: ajusta o menu em telas menores */
+@media (max-width: 768px) {
+    .menu-horizontal {
+        flex-direction: column;  /* Coloca os itens do menu em coluna */
+        align-items: center;  /* Centraliza os itens verticalmente */
+    }
+
+    .menu-horizontal li a {
+        padding: 10px 20px;  /* Ajusta o padding nos links para telas menores */
+    }
+
+    footer p {
+        font-size: 12px;  /* Tamanho de fonte menor em dispositivos móveis */
+    }
+}
