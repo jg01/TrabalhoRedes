@@ -14,7 +14,7 @@
             <div class="titulo1">
                 <h1>Redes de Computadores</h1>
             </div>
-            <div class=titulo2>
+            <div class="titulo2">
                 <h2>LORA e LORAWAN</h2>
             </div>
         </div>
@@ -39,77 +39,114 @@
             <div id="intro">
                 <h3 id="intro">Introdução</h3>
                 <p class="paragrafo-principal">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting
-                    industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                    unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived
-                    not only five centuries, but also the leap into electronic typesetting, remaining essentially
-                    unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem
-                    Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including
-                    versions of Lorem Ipsum.</p>
+                    O crescimento exponencial de dispositivos conectados à Internet das Coisas (IoT) demanda soluções de comunicação de longo alcance e baixo consumo energético. Nesse contexto, o LoRa (Long Range) surge como uma tecnologia de modulação de espectro espalhado que permite transmissões de dados em faixas sub-GHz, garantindo alcance de até 15 km em ambientes rurais e consumo reduzido de energia nos sensores finais. A camada de rede, gerenciada pelo protocolo LoRaWAN, padroniza a comunicação entre dispositivos e gateways, possibilitando uma infraestrutura escalável e de baixo custo para aplicações diversas.
+                </p>
+                <p class="paragrafo-principal">
+                    Além da eficiência energética, o modelo de conectividade LoRaWAN adota um formato de estrela hierárquica, onde os nós finais transmitem diretamente aos gateways, que por sua vez encaminham os pacotes para um servidor de rede via IP. Esse paradigma simplifica o dimensionamento de redes e reduz a complexidade de roteamento, fatores essenciais para projetos de larga escala na IoT industrial, agrícola e de cidades inteligentes.
+                </p>
             </div>
+
             <div id="lora">
                 <h3 id="lora">LoRa/LoRaWAN</h3>
                 <img class="imagem-principal" src="/static/images/lora-vs-lorawan.webp" alt="Descrição da imagem">
-                <p class="paragrafo-principal">Vai escrevendo.......</p>
+                <p class="paragrafo-principal">
+                    LoRa refere-se à técnica de modulação proprietária desenvolvida pela Semtech, baseada em Chirp Spread Spectrum (CSS), que confere robustez contra interferências e permite longos alcances com baixas taxas de dados. Já o LoRaWAN é um protocolo de comunicação de camada superior, aberto e gerenciado pela LoRa Alliance, responsável por definir aspectos como classes de dispositivo, níveis de segurança e procedimentos de abertura de sessão.
+                </p>
+                <p class="paragrafo-principal">
+                    As diferenças fundamentais entre LoRa e LoRaWAN residem, portanto, na distinção entre o método físico de transmissão (LoRa) e o conjunto de especificações de rede (LoRaWAN). Enquanto o LoRaWAN padroniza a interação entre milhões de dispositivos e servidores, incluindo autenticação e criptografia, o LoRa provê unicamente a modulação de sinais em frequência sub-GHz.
+                </p>
             </div>
+
             <div id="topologia">
                 <h3 id="topologia">Topologia</h3>
                 <img class="imagem-principal" src="/static/images/lora-vs-lorawan.webp" alt="Descrição da imagem">
-                <p class="paragrafo-principal">Vai escrevendo.......</p>
+                <p class="paragrafo-principal">
+                    A topologia típica de redes LoRaWAN é a estrela de estrelas: dispositivos finais (nós) enviam dados diretamente a múltiplos gateways em alcance, e estes, por sua vez, transferem os pacotes ao Network Server centralizado. Essa topologia minimiza o consumo de energia dos nós, uma vez que não há necessidade de retransmissão entre os sensores, e reduz a complexidade de configuração de roteamento.
+                </p>
+                <p class="paragrafo-principal">
+                    Além disso, a arquitetura permite redundância e balanceamento de carga: um único pacote transmitido por um nó pode ser recebido simultaneamente por vários gateways, aumentando a confiabilidade da rede em cenários urbanos densos ou ambientes sujeitos a intermittências de sinal.
+                </p>
             </div>
+
             <div id="arquitetura">
                 <h3 id="arquitetura">Arquitetura</h3>
                 <img class="imagem-principal" src="/static/images/lora-vs-lorawan.webp" alt="Descrição da imagem">
-                <p class="paragrafo-principal">Vai escrevendo.......</p>
+                <p class="paragrafo-principal">
+                    A arquitetura de referência LoRaWAN compreende três componentes principais: nós finais (end-devices), gateways e servidores (Network Server, Join Server e Application Server) interconectados via IP. O Join Server gerencia o processo de autenticação over-the-air (OTAA), garantindo que apenas dispositivos autorizados participem da rede.
+                </p>
+                <p class="paragrafo-principal">
+                    O Network Server foca no roteamento, desduplicação de pacotes e controle de políticas de transmissão (por exemplo, ADR – Adaptive Data Rate), enquanto o Application Server finaliza o fluxo de dados entregando informações ao usuário ou aplicação específica. Essa separação de responsabilidades facilita a escalabilidade e a implementação de features avançadas, como geolocalização por triangulação de gateways.
+                </p>
             </div>
+
             <div id="modulacao">
                 <h3 id="modulacao">Modulação</h3>
                 <img class="imagem-principal" src="/static/images/lora-vs-lorawan.webp" alt="Descrição da imagem">
-                <p class="paragrafo-principal">Vai escrevendo.......</p>
+                <p class="paragrafo-principal">
+                    A tecnologia LoRa utiliza Chirp Spread Spectrum (CSS), em que os símbolos são modulados ao longo de um “chirp” (variação linear de frequência), conferindo alta imunidade a ruído e multipercurso. A largura de banda pode variar entre 7,8 kHz e 500 kHz, e o fator de espalhamento (SF) — de 7 a 12 — ajusta o trade-off entre taxa de dados e alcance.
+                </p>
+                <p class="paragrafo-principal">
+                    Com SF mais alto, cada bit ocupa mais tempo de transmissão, estendendo o alcance, porém reduzindo a eficiência espectral. A técnica CSS também permite que múltiplas transmissões com diferentes SF coexistam na mesma frequência sem interferência significativa, um grande benefício para redes densas.
+                </p>
             </div>
+
             <div id="aplicacoes">
                 <h3 id="aplicacoes">Aplicações</h3>
                 <img class="imagem-principal" src="/static/images/lora-vs-lorawan.webp" alt="Descrição da imagem">
-                <p class="paragrafo-principal">Vai escrevendo.......</p>
+                <p class="paragrafo-principal">
+                    Redes LoRaWAN são amplamente utilizadas em monitoramento ambiental (qualidade do ar, níveis de água), agricultura de precisão (umidade do solo, detecção de pragas) e rastreamento de ativos em logística. A longa autonomia de bateria (até 10 anos em algumas implementações) torna-a ideal para sensores remotos de difícil acesso.
+                </p>
+                <p class="paragrafo-principal">
+                    Cidades inteligentes também se beneficiam de LoRaWAN em sistemas de iluminação pública, medidores de utilidades (smart metering) e gestão de estacionamentos, graças à sua capacidade de cobrir grandes áreas urbanas com poucos gateways e baixo custo operacional.
+                </p>
             </div>
+
             <div id="outras">
                 <h3 id="outras">Outras Tecnologias</h3>
                 <img class="imagem-principal" src="/static/images/lora-vs-lorawan.webp" alt="Descrição da imagem">
-                <p class="paragrafo-principal">Vai escrevendo.......</p>
+                <p class="paragrafo-principal">
+                    Entre as alternativas a LoRa/LoRaWAN estão NB-IoT (Narrowband IoT) e Sigfox, que usam espectro licenciado e não licenciado, respectivamente. O NB-IoT oferece taxas de dados superiores e QoS garantido pelas operadoras, mas com consumo energético e custos de módulo mais elevados. O Sigfox, assim como LoRa, atua em bandas sub-GHz e foca em mensagens curtas e consumo mínimo, porém possui taxa de falhas de entrega maior devido à menor robustez de modulação.
+                </p>
+                <p class="paragrafo-principal">
+                    Comparativamente, LoRaWAN apresenta melhor equilíbrio entre alcance, segurança e flexibilidade de implantação — pois não depende de infraestrutura de operadora — enquanto NB-IoT e Sigfox podem ser preferidos em cenários que demandem SLAs estritos ou cobertura em regiões sem comunidades LoRaWAN estabelecidas.
+                </p>
             </div>
+
             <div id="conclusao">
                 <h3 id="conclusao">Conclusão</h3>
                 <img class="imagem-principal" src="/static/images/lora-vs-lorawan.webp" alt="Descrição da imagem">
-                <p class="paragrafo-principal">Vai escrevendo.......</p>
+                <p class="paragrafo-principal">
+                    As redes LoRa/LoRaWAN se consolidaram como uma solução versátil e de baixo custo para aplicações de IoT em larga escala, oferecendo longo alcance, baixo consumo de energia e escalabilidade. A combinação de modulação CSS com um protocolo de rede aberto permite a implementação de soluções customizadas sem depender de operadoras móveis.
+                </p>
+                <p class="paragrafo-principal">
+                    Apesar da concorrência de tecnologias como NB-IoT e Sigfox, o ecossistema LoRaWAN — suportado pela LoRa Alliance e por uma comunidade global ativa — favorece a inovação e a adoção em diferentes setores, desde a agricultura até cidades inteligentes, tornando-se uma peça-chave no futuro da Internet das Coisas.
+                </p>
             </div>
+
             <div id="perguntas">
                 <h3 id="perguntas">Perguntas</h3>
                 <img class="imagem-principal" src="/static/images/lora-vs-lorawan.webp" alt="Descrição da imagem">
-                <p class="paragrafo-principal">Vai escrevendo.......</p>
+                <ol class="paragrafo-principal">
+                    <li><strong>Quais fatores influenciam a escolha do fator de espalhamento (SF) em LoRa?</strong><br>
+                        Maior SF aumenta alcance e robustez ao ruído, mas reduz a taxa de dados e aumenta o tempo de transmissão.</li>
+                    <li><strong>Como funciona o mecanismo de Adaptive Data Rate (ADR) em LoRaWAN?</strong><br>
+                        O ADR ajusta automaticamente SF e potência de transmissão de cada nó conforme a qualidade do link, otimizando alcance e consumo de energia.</li>
+                    <li><strong>Compare os modelos de autenticação OTAA e ABP em termos de segurança.</strong><br>
+                        OTAA gera chaves de sessão dinâmicas durante a associação, oferecendo maior segurança; ABP usa chaves pré-configuradas, simplificando a ativação mas com risco maior em caso de vazamento.</li>
+                    <li><strong>Quais são as principais limitações do CSS em ambientes urbanos densos?</strong><br>
+                        Reflexões e multipercurso degradam o sinal CSS, e a alta densidade de redes pode causar mais colisões em frequência sub-GHz.</li>
+                    <li><strong>De que forma a separação de servidores (Join, Network, Application) melhora a escalabilidade da rede?</strong><br>
+                        Cada servidor pode ser dimensionado e mantido independentemente, aumentando a flexibilidade e disponibilidade da infraestrutura.</li>
+                </ol>
             </div>
-            <div id="referencias">
-                <h3 id="referencias">Referências</h3>
-                <ul class="referencias-lista">
-                    <li class="referencia-item">MAKERHERO. <i>O que é LoRa?</i> Disponível em: <a href="https://www.makerhero.com/blog/o-que-e-lora/">https://www.makerhero.com/blog/o-que-e-lora/</a>. Acesso em: 2 abr. 2025.</li>
-                    <li class="referencia-item">LOGPYX. <i>LoRa e LoRaWAN: diferenças das tecnologias</i>. Disponível em: <a href="https://logpyx.com/lora-e-lorawan-diferencas-das-tecnologias/">https://logpyx.com/lora-e-lorawan-diferencas-das-tecnologias/</a>. Acesso em: 2 abr. 2025.</li>
-                    <li class="referencia-item">THE THINGS NETWORK. <i>What are LoRa and LoRaWAN?</i> Disponível em: <a href="https://www.thethingsnetwork.org/docs/lorawan/what-is-lorawan/">https://www.thethingsnetwork.org/docs/lorawan/what-is-lorawan/</a>. Acesso em: 2 abr. 2025.</li>
-                    <li class="referencia-item">SEMTECH CORPORATION. <i>LoRa® and LoRaWAN®</i>. Versão 1.0. Março de 2024. Disponível em: <a href="https://www.semtech.com/uploads/technology/LoRa/lora-and-lorawan.pdf">https://www.semtech.com/uploads/technology/LoRa/lora-and-lorawan.pdf</a>. Acesso em: 2 abr. 2025.</li>
-                    <li class="referencia-item">DIGI INTERNATIONAL. <i>What Is LoRaWAN?</i> Disponível em: <a href="https://www.digi.com/solutions/by-technology/lorawan">https://www.digi.com/solutions/by-technology/lorawan</a>. Acesso em: 2 abr. 2025.</li>
-                    <li class="referencia-item">MOKOSMART. <i>Quais são as diferenças entre LoRa e LoRaWAN</i>. Disponível em: <a href="https://www.mokosmart.com/lora-and-lorawan/">https://www.mokosmart.com/lora-and-lorawan/</a>. Acesso em: 2 abr. 2025.</li>
-                    <li class="referencia-item">LINEMETRICS. <i>Finalmente compreensível: LoRa (e LoRaWAN) explicado de forma simples</i>. Disponível em: <a href="https://www.linemetrics.com/en/finally-understandable-lora-and-lorawan-explained-simply/">https://www.linemetrics.com/en/finally-understandable-lora-and-lorawan-explained-simply/</a>. Acesso em: 6 abr. 2025.</li>
-                    <li class="referencia-item">ERTÜRK, Mehmet Ali; AYDIN, Muhammed Ali; BÜYÜKAKKAŞLAR, Muhammet Talha; EVIRGEN, Hayrettin. <i>A Survey on LoRaWAN Architecture, Protocol and Technologies</i>. Future Internet, v. 11, n. 10, p. 216, 17 out. 2019. Disponível em: <a href="https://www.mdpi.com/1999-5903/11/10/216">https://www.mdpi.com/1999-5903/11/10/216</a>. Acesso em: 6 abr. 2025.</li>
-                </ul>
-            </div>
+
         </div>
     </main>
 
     <button id="backToTop" title="Voltar ao topo">&#8593;</button>
 
     <script>
-        // Obtém o botão de voltar ao topo
         const backToTopButton = document.getElementById("backToTop");
-
-        // Quando o usuário rolar para baixo 100px, mostre o botão
         window.onscroll = function () {
             if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
                 backToTopButton.classList.add("visible");
@@ -117,8 +154,6 @@
                 backToTopButton.classList.remove("visible");
             }
         };
-
-        // Quando o botão for clicado, a página rolará para o topo
         backToTopButton.onclick = function () {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         };
